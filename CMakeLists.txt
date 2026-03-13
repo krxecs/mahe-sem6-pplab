@@ -9,13 +9,13 @@ check_language(CUDA)
 if(CMAKE_CUDA_COMPILER)
   enable_language(CUDA)
   message(STATUS "CUDA support enabled (CUDA Compiler: ${CMAKE_CUDA_COMPILER})")
-  
+
   # Set CUDA standard
   if(NOT DEFINED CMAKE_CUDA_STANDARD)
     set(CMAKE_CUDA_STANDARD 14)
     set(CMAKE_CUDA_STANDARD_REQUIRED ON)
   endif()
-  
+
   # Auto-detect GPU architectures (CMake 3.24+)
   # For older CMake, specify architectures manually:
   set(CMAKE_CUDA_ARCHITECTURES 50 72)
@@ -31,3 +31,5 @@ add_subdirectory(lab-02)
 add_subdirectory(lab-03)
 add_subdirectory(lab-04)
 add_subdirectory(lab-05)
+add_subdirectory(lab-06)
+add_subdirectory(lab-07)
